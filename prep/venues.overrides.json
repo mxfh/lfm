@@ -1,0 +1,19 @@
+{
+  "_comment": "Manual venue coords for places Nominatim mis-resolved or couldn't find (stages on named squares, named places without a street number). Verified against the festival Stadtplan. Each: pinned lat/lon (derived fact).",
+  "B1": { "lat": 51.16328, "lon": 13.47047, "note": "Bühne Markt — Markt (Platz)" },
+  "B2": { "lat": 51.16328, "lon": 13.47238, "note": "Bühne Heinrichsplatz" },
+  "B3": { "lat": 51.16237, "lon": 13.46971, "note": "Kinderbühne Tuchmachertor" },
+  "B4": { "lat": 51.16305, "lon": 13.47282, "note": "Interkulturelle Bühne — Schulplatz (näher an Kinderbibliothek/Kleinmarkt gepinnt)" },
+  "B5": { "lat": 51.16484, "lon": 13.47217, "note": "Krimibühne Theaterplatz" },
+  "7": { "lat": 51.16602, "lon": 13.47228, "note": "Amtsstufen / Weinberg (Burgberg-Südseite)" },
+  "20": { "lat": 51.16241, "lon": 13.46840, "note": "Garten Freiheit 11" },
+  "22": { "lat": 51.16237, "lon": 13.46971, "note": "SEEG Eventraum am Tuchmachertor" },
+  "24": { "lat": 51.16293, "lon": 13.47253, "note": "Kinderbibliothek — Stadtbibliothek, Kleinmarkt 5" },
+  "25": { "lat": 51.16258, "lon": 13.47195, "note": "Kleinmarkt — neben Kleinmarktschänke gepinnt" },
+  "40": { "lat": 51.1616608, "lon": 13.4768134, "note": "KulturCafé Schiffchen — Google Maps Place" },
+  "42": { "lat": 51.1630009, "lon": 13.4829407, "note": "Empfangshalle Bahnhof Meißen — Google Maps Bahnhof-Meißen Place" },
+  "45": { "lat": 51.1592809, "lon": 13.4843508, "note": "St. Urbanskirche Meißen — Google Maps Place" },
+  "48": { "lat": 51.15622, "lon": 13.48466, "note": "AWO, Dresdner Straße 50, Cölln" },
+  "33": { "lat": 51.1612257, "lon": 13.4698180, "note": "Galerie Himmlisch — Google Maps Place" },
+  "36": { "lat": 51.15327, "lon": 13.45861, "note": "KAFF — Nordecke der Lutherkirche, Triebischtal (corrected from Nominatim)" }
+}

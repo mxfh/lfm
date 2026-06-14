@@ -1,0 +1,111 @@
+---
+import type { LfmEvent, Venue } from "../data";
+import { sourceUrl } from "../data";
+import { appContent } from "../app-content";
+import { isCancelled, isMoved, hueOf } from "../lib/format";
+import { langAutonym, type T } from "../i18n";
+import { titleTranslationsFor } from "../title-translations";
+import { cx, uiClass } from "../ui-classes";
+
+interface PersonTag { key: string; name: string; profile: boolean; repeated: boolean }
+interface Props { e: LfmEvent; venue?: Venue; t: T; people?: PersonTag[]; showInlineTime?: boolean }
+const { e, venue, t, people = [], showInlineTime = false } = Astro.props;
+
+const cancelled = isCancelled(e);
+const moved = isMoved(e);
+const statusKind = cancelled ? "cancel" : moved ? "move" : "";
+const statusLabel = statusKind ? e.status : "";
+const nonDe = e.languages.filter((l) => l !== "de");
+const venueKey = e.venueNo || e.venue;
+const primaryPerson = people.find((person) => person.profile) ?? people[0];
+const inlineAuthorPerson = people.find((person) => person.profile && e.who.includes(person.name));
+const repeatedPerson = people.find((person) => person.repeated && e.who.includes(person.name));
+const displayRole = e.role
+  ?.replace(/AUTORINNEN|AUTOREN/g, "AUTOR·INNEN")
+  .replace(/AUTORIN|AUTOR/g, "AUTOR·IN")
+  .replace(/Autorinnen|Autoren/g, "Autor·innen")
+  .replace(/Autorin|Autor/g, "Autor·in");
+// Text-fragment deep link: scrolls to + highlights the entry on the official page
+// (the program table rows have no ids). Falls back to the page in browsers without support.
+const frag = (e.work || e.title.replace(/[«»]/g, "") || e.who).trim();
+const outHref = frag ? `${sourceUrl}#:~:text=${encodeURIComponent(frag)}` : sourceUrl;
+const titleTranslations = titleTranslationsFor(e.stableId, e.title);
+---
+<article
+  id={`entry-${e.stableId}`}
+  class:list={["card", "card-interactive", { "is-cancelled": cancelled, "is-moved": moved }]}
+  data-card data-id={e.id} data-stable-id={e.stableId} data-mkey={e.mkey} data-stable-key={e.stableKey ?? e.mkey} data-date={e.date} data-start={e.start} data-end={e.end} data-duration={e.durationMinutes}
+  data-venue={venueKey} data-langs={e.languages.join(",")} data-genre={e.genreGroup}
+  data-person-keys={people.map((person) => person.key).join(",")} data-author-keys={people.filter((person) => person.profile).map((person) => person.key).join(",")}
+  data-changed={e.changed ? "1" : ""} data-cancel={cancelled ? "1" : ""} data-allday={e.allDay ? "1" : ""} data-featured={e.featured ? "1" : ""}
+  data-hasbook={e.bookAuthor ? "1" : ""} data-hasrole={e.role ? "1" : ""} data-hasauthor={primaryPerson?.profile ? "1" : ""}
+  data-lat={venue?.lat ?? ""} data-lon={venue?.lon ?? ""}
+  data-calendar-title={e.title || e.work || e.who || appContent.calendar.defaultEventTitle}
+  data-calendar-who={e.who}
+  data-calendar-location={venue?.display ?? e.venue}
+  data-source-role={e.role ?? ""}
+  data-role={displayRole ?? ""}
+  data-verb={e.verb}
+  data-work={e.work}
+  data-book-author={e.bookAuthor}
+  data-source-url={outHref}
+  data-text={`${e.who} ${e.title} ${e.venue} ${e.genre}`.toLowerCase()}
+>
+  {statusLabel && <div class:list={["status-head", `status-${statusKind}`]}>{statusLabel}</div>}
+
+  <div class:list={["card-row", { "has-inline-time": showInlineTime }]}>
+    {showInlineTime && (
+      <div class="card-time-col">
+        <time class={cx(uiClass.time, "leading-none")}>{e.start || "—"}</time>
+      </div>
+    )}
+
+    <div class="card-body min-w-0">
+      {e.who && (
+        <p class="who-reader mb-0.5 text-[0.88rem] leading-snug text-[var(--color-muted)]">
+          {e.featured && <span class={cx("role-badge role-featured", uiClass.label)}>TiPP!</span>}
+          <span class="author-name">
+            <span class="ic ic-pen"></span>
+            {displayRole && <span class={cx("role-badge", uiClass.label)}>{displayRole}</span>}
+            {inlineAuthorPerson ? (
+              <button class={cx("author-name-link", uiClass.person)} type="button" data-author-open={inlineAuthorPerson.key} title={inlineAuthorPerson.name}>{e.who}</button>
+            ) : (
+              <span class={uiClass.person}>{e.who}</span>
+            )}
+            {repeatedPerson && (
+              <button
+                class={cx("person-more", uiClass.label)}
+                type="button"
+                title={repeatedPerson.name}
+                aria-label={`Mehr von ${repeatedPerson.name}`}
+                data-author-open={repeatedPerson.profile ? repeatedPerson.key : undefined}
+                data-person-filter={!repeatedPerson.profile ? repeatedPerson.name : undefined}
+              >+</button>
+            )}
+          </span>{e.verb && <span class="who-verb"> {e.verb}</span>}
+        </p>
+      )}
+      <h3 class={uiClass.title}>
+        {e.title}
+        {Object.keys(titleTranslations).length > 0 && (
+          <span class="title-translation" data-title-translations={JSON.stringify(titleTranslations)} hidden></span>
+        )}
+      </h3>
+
+      <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[0.8rem] text-[var(--color-muted)]">
+        {venue && (
+          <button class="venue-btn" type="button" data-venue-open={venueKey} title={venue.venue}>
+            {e.venueNo && <span class={uiClass.index}>{e.venueNo}</span>}<span>{venue.venue}</span>
+          </button>
+        )}
+        {e.allDay && <span class={cx(uiClass.tag, "badge-allday")} data-i18n="card.allday">{t("card.allday")}</span>}
+        {e.genreGroup && <button class={cx(uiClass.tag, "badge-genre")} type="button" data-genre-filter={e.genreGroup} style={`--h:${hueOf(e.genreGroup)}`}>{e.genreGroup}</button>}
+        {nonDe.map((l) => <span class={cx(uiClass.tag, "badge-lang")}>{langAutonym[l] ?? l}</span>)}
+      </div>
+    </div>
+
+    <div class="card-action">
+      <button class="bookmark-entry" type="button" data-bookmark aria-pressed="false" aria-label={t("card.bookmark")}><span class="ic ic-bookmark"></span></button>
+    </div>
+  </div>
+</article>

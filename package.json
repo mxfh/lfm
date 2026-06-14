@@ -1,0 +1,29 @@
+{
+  "name": "literaturfest-meissen",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Inoffizielle mobile Begleit-App fuer das Literaturfest Meissen: Lesungen merken und sehen, was man von jetzt an zu Fuss noch erreicht.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "data": "tsx scripts/build-data.ts",
+    "data:program": "tsx scripts/fetch-program.ts",
+    "data:geo": "tsx scripts/geocode-venues.ts",
+    "data:dist": "tsx scripts/build-distances.ts",
+    "data:authors": "tsx scripts/enrich-authors.ts",
+    "mirror:sources": "tsx scripts/mirror-sources.ts",
+    "test:smoke": "pnpm build && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/node": "^22.19.21",
+    "astro": "^6.4.6",
+    "node-html-parser": "^7.1.0",
+    "tailwindcss": "^4.3.1",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
+  }
+}

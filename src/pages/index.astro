@@ -1,0 +1,365 @@
+---
+import "../styles/app.css";
+import { events, venues, venuesByKey, days, genreGroups, languagesPresent, distances, sourceModified, sourceUrl, venueKeyOf, authors } from "../data";
+import { appContent, resolveSourceLinks } from "../app-content";
+import { translator, DEFAULT_LANG, UI_LANGS, nativeName, langAutonym } from "../i18n";
+import { dayLabel } from "../lib/format";
+import { AUTHOR_PROFILE_SEEDS } from "../author-profiles";
+import { authorNamesForEvent, presenterNamesForEvent, personKey } from "../people";
+import { VENUE_ACCESSIBILITY } from "../venue-accessibility";
+import { cx, uiClass } from "../ui-classes";
+import EventCard from "../components/EventCard.astro";
+
+const t = translator(DEFAULT_LANG);
+const base = import.meta.env.BASE_URL;
+const linkKey = (url: string) => url.replace(/\/$/, "");
+const personEvents = new Map<string, { name: string; events: Set<string>; profile: boolean }>();
+const eventPeople = new Map<string, { key: string; name: string; profile: boolean; repeated: boolean }[]>();
+const addPerson = (name: string, stableId: string, profile: boolean) => {
+  const key = personKey(name);
+  if (!key) return;
+  const current = personEvents.get(key) ?? { name, events: new Set<string>(), profile: false };
+  current.events.add(stableId);
+  current.profile = current.profile || profile;
+  personEvents.set(key, current);
+};
+for (const e of events) {
+  authorNamesForEvent(e).forEach((name) => addPerson(name, e.stableId, true));
+  presenterNamesForEvent(e).forEach((name) => addPerson(name, e.stableId, false));
+}
+for (const e of events) {
+  const tags = [...authorNamesForEvent(e).map((name) => ({ name, profile: true })), ...presenterNamesForEvent(e).map((name) => ({ name, profile: false }))];
+  eventPeople.set(e.stableId, tags.map(({ name, profile }) => {
+    const key = personKey(name);
+    const info = personEvents.get(key);
+    return { key, name, profile: profile && !!info?.profile, repeated: (info?.events.size ?? 0) > 1 };
+  }).filter((tag) => tag.key));
+}
+const authorProfiles = Object.fromEntries([...personEvents.entries()].filter(([, person]) => person.profile).map(([key, person]) => {
+  const seedLinks = AUTHOR_PROFILE_SEEDS[person.name]?.links ?? [];
+  const wiki = authors[person.name]?.url;
+  const links = [...seedLinks];
+  if (wiki && !links.some((link) => linkKey(link.url) === linkKey(wiki))) links.push({ label: "Wikipedia", url: wiki, kind: "wikipedia" });
+  return [key, { name: person.name, links, events: [...person.events] }];
+}));
+const byDay = days.map((d) => {
+  const slots = new Map<string, typeof events>();
+  for (const e of events.filter((item) => item.date === d.date)) {
+    const key = e.allDay ? t("card.allday") : (e.start || "—");
+    slots.set(key, [...(slots.get(key) ?? []), e]);
+  }
+  return { d, slots: [...slots.entries()].map(([label, items]) => ({ label, items })) };
+});
+const sourceLinks = resolveSourceLinks(appContent.sources, { base, officialProgramUrl: sourceUrl });
+const meta = {
+  sourceModified,
+  sourceUrl,
+  base,
+  app: appContent.calendar,
+  sources: sourceLinks,
+};
+---
+<!doctype html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>{appContent.meta.title}</title>
+  <meta name="description" content={appContent.meta.description} />
+  <meta name="robots" content="index,follow" />
+  <meta name="application-name" content={appContent.meta.applicationName} />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content={appContent.meta.appleTitle} />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href={`${base}favicon.svg`} />
+  <link rel="apple-touch-icon" sizes="180x180" href={`${base}apple-touch-icon.png`} />
+  <link rel="manifest" href={`${base}manifest.webmanifest`} />
+  <meta name="theme-color" content={appContent.meta.themeColorLight} media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content={appContent.meta.themeColorDark} media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content={appContent.meta.themeColor} />
+  <script is:inline>try{var t=JSON.parse(localStorage.getItem("lfm.theme"));if(t&&t!=="system")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+</head>
+<body data-view="program">
+  <header id="app-header" class="app-header mx-auto max-w-screen-sm px-4 pt-3 pb-1">
+    <div class="topbar">
+      <button id="theme-btn" class="iconbtn" type="button" title={t("ui.theme")} aria-label={t("ui.theme")}>
+        <span class="ic ic-auto" id="theme-ic"></span>
+      </button>
+      <label class="langpick" title={t("ui.language")}>
+        <span class="ic ic-globe"></span>
+        <span class="sr-only" data-i18n="ui.language">{t("ui.language")}</span>
+        <select id="ui-lang">{UI_LANGS.map((l) => <option value={l}>{nativeName[l]}</option>)}</select>
+      </label>
+    </div>
+    <h1 class="app-title">
+      <button id="home-title" class={cx(uiClass.display, "app-title-button")} type="button" aria-label={t("nav.program")}>
+        {appContent.header.titleParts.map((part, index) => (
+          <>
+            <span class:list={{ "title-accent": part.accent }}>{part.text}</span>{index < appContent.header.titleParts.length - 1 && " "}
+          </>
+        ))}
+      </button>
+    </h1>
+    <div class="app-meta-row">
+      <p class="app-meta-line">
+        <span data-i18n={appContent.header.taglineKey}>{t(appContent.header.taglineKey)}</span>
+        <span class="meta-sep">·</span>
+        <span>{appContent.event.year}</span>
+        <span class="meta-sep top-source-sep">·</span>
+        <a class={cx("top-source-link", uiClass.ui)} href={sourceUrl} target="_blank" rel="noopener" data-i18n={appContent.header.programLinkKey}>{t(appContent.header.programLinkKey)}</a>
+        <button id="info-btn" class="info-btn" type="button" aria-haspopup="dialog" aria-label={t(appContent.header.infoLabelKey)} title={t(appContent.header.infoLabelKey)}>
+          <span class="ic ic-info"></span>
+        </button>
+      </p>
+      <div class="bottombar" role="search">
+        <div class="bottombar-inner mx-auto max-w-screen-sm">
+          <div id="search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+          <div class="searchbar">
+            <span class="ic ic-search"></span>
+            <input id="search" type="search" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false" placeholder={t("filter.searchPlaceholder")}
+              class="w-full px-3 py-2 text-[0.95rem]" />
+            <button id="search-cancel" class="search-cancel" type="button" data-i18n="search.cancel">{t("search.cancel")}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="program-tools">
+      <div class="filterchips">
+        <button id="filter-btn" class={uiClass.control} type="button" aria-haspopup="dialog">
+          <span data-i18n="filter.title">{t("filter.title")}</span><span id="filter-count" class="filter-count" hidden></span>
+        </button>
+        <button class={uiClass.control} type="button" data-quick="kinder" aria-pressed="false" data-i18n="quick.kinder">{t("quick.kinder")}</button>
+        <button class={uiClass.control} type="button" data-quick="author" aria-pressed="false" data-i18n="quick.author">{t("quick.author")}</button>
+        <span id="active-filters" class="active-filters"></span>
+        <button id="filter-clear-row" class={cx(uiClass.control, "filter-clear-row")} type="button" data-i18n="filter.reset" hidden>{t("filter.reset")}</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-screen-sm px-3 pb-36">
+    <!-- ===== PROGRAM ===== -->
+    <section id="view-program" data-view="program">
+      <dialog id="filter-modal" class="sheet">
+        <div class="sheet-body">
+          <div class={uiClass.sheetHead}><b data-i18n="filter.title">{t("filter.title")}</b><button class="sheet-x" data-close type="button" aria-label="close">✕</button></div>
+          <p class={cx("filter-label", uiClass.label)} data-i18n="filter.languages">{t("filter.languages")}</p>
+          <div class="flex flex-wrap gap-1.5" data-row="lang">
+            {languagesPresent.map((l) => <button class={uiClass.control} type="button" data-lang={l} aria-pressed="false">{langAutonym[l] ?? l}</button>)}
+          </div>
+          <p class={cx("filter-label", uiClass.label)}><span data-i18n="filter.genre">{t("filter.genre")}</span> <span class="opacity-70">(+/–)</span></p>
+          <div class="flex flex-wrap gap-1.5" data-row="genre">
+            {genreGroups.map((g) => <button class={uiClass.control} type="button" data-genre={g} data-state="off">{g}</button>)}
+          </div>
+          <p class={cx("filter-label", uiClass.label)} data-i18n="filter.show">{t("filter.show")}</p>
+          <div class="flex flex-wrap gap-1.5" data-row="who">
+            <button class={uiClass.control} type="button" data-who="reader" aria-pressed="true" data-i18n="filter.byReader">{t("filter.byReader")}</button>
+            <button class={uiClass.control} type="button" data-who="author" aria-pressed="false" data-i18n="filter.byAuthor">{t("filter.byAuthor")}</button>
+          </div>
+          <button id="filter-reset" class={cx(uiClass.control, "mt-3")} type="button" data-i18n="filter.reset">{t("filter.reset")}</button>
+        </div>
+      </dialog>
+
+      <dialog id="time-modal" class="sheet">
+        <div class="sheet-body">
+          <div class={uiClass.sheetHead}><b data-i18n="now.time">{t("now.time")}</b><button class="sheet-x" data-close type="button" aria-label="close">✕</button></div>
+          <div class="flex flex-wrap gap-1.5" id="time-jumps">
+            <button class={uiClass.control} type="button" data-jump="now" data-i18n="now.live">{t("now.live")}</button>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog id="nearby-modal" class="sheet">
+        <div class="sheet-body">
+          <div class={uiClass.sheetHead}><b><span class="ic ic-pin"></span><span data-i18n="nearby.heading">{t("nearby.heading")}</span></b><button class="sheet-x" data-close type="button" aria-label="close">✕</button></div>
+          <div id="nearby-list" class="nearby-list nearby-list-sheet"></div>
+          <p id="nearby-empty" class="nearby-empty" data-i18n="nearby.empty" hidden>{t("nearby.empty")}</p>
+        </div>
+      </dialog>
+
+      <dialog id="info-modal" class="sheet info-sheet">
+        <div class="sheet-body info-body">
+          <div class={uiClass.sheetHead}><b data-i18n={appContent.info.titleKey}>{t(appContent.info.titleKey)}</b><button class="sheet-x" data-close type="button" aria-label="close">✕</button></div>
+          <p class="info-lead" data-i18n={appContent.info.leadKey}>{t(appContent.info.leadKey)}</p>
+          <ul class="info-list">
+            {appContent.info.detailKeys.map((key) => <li data-i18n={key}>{t(key)}</li>)}
+          </ul>
+          <div class="install-block">
+            <button id="pwa-install" class={cx(uiClass.linkRow, "install-action pwa-install")} type="button" hidden>
+              <span><span class="ic ic-install"></span><span data-i18n="pwa.install">{t("pwa.install")}</span></span>
+            </button>
+            <p id="pwa-install-hint" class={cx("install-hint", uiClass.meta)} data-i18n="pwa.installHint" hidden>{t("pwa.installHint")}</p>
+          </div>
+          <h3 class={cx("filter-label", uiClass.label)} data-i18n={appContent.info.sourcesTitleKey}>{t(appContent.info.sourcesTitleKey)}</h3>
+          <div class="source-list">
+            {sourceLinks.map((link) => (
+              <a class={cx(uiClass.linkRow, "source-link")} href={link.href} target="_blank" rel="noopener" data-i18n={link.labelKey}>{t(link.labelKey)}</a>
+            ))}
+          </div>
+          <p class={cx("source-meta", uiClass.meta)}><span data-i18n={appContent.info.sourceModifiedKey}>{t(appContent.info.sourceModifiedKey)}</span>: <time datetime={sourceModified}>{sourceModified}</time></p>
+        </div>
+      </dialog>
+
+      <div id="timeline-head" class="program-list-head">
+        <div class="datetime-nav">
+          <button id="datetime-time" class={cx("datetime-time", uiClass.clock)} type="button" aria-haspopup="dialog" aria-label={t("now.time")} data-current-time="--:--">
+            <span class="datetime-time-face datetime-time-current" aria-hidden="true">--:--</span>
+            <span class="datetime-time-face datetime-time-next" aria-hidden="true">--:--</span>
+          </button>
+          <div class="daynav">
+            <button class="daynav-arrow" type="button" data-day-prev aria-label="prev">‹</button>
+            <button id="day-jump" class={cx("daynav-date", uiClass.clock)} type="button" aria-haspopup="dialog"></button>
+            <button class="daynav-arrow" type="button" data-day-next aria-label="next">›</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="program-list" class="timeline-list">
+        {byDay.map((g) => (
+          <section class="day" data-day-date={g.d.date}>
+            {g.slots.map((slot) => (
+              <section class="time-slot" data-time-slot={slot.label}>
+                <h2 class={cx("time-slot-title", uiClass.clock)}>{slot.label}</h2>
+                <div class="grid gap-2">
+                  {slot.items.map((e) => <EventCard e={e} venue={venuesByKey.get(venueKeyOf(e))} t={t} people={eventPeople.get(e.stableId) ?? []} />)}
+                </div>
+              </section>
+            ))}
+          </section>
+        ))}
+      </div>
+      <p id="no-results" class="mt-8 text-center text-[var(--color-muted)]" hidden>—</p>
+    </section>
+
+    <!-- ===== SAVED ===== -->
+    <section id="view-saved" data-view="saved" hidden>
+      <div class="saved-head">
+        <div class="saved-title-wrap">
+          <h2 class={cx("saved-title", uiClass.section)} data-i18n="saved.heading">{t("saved.heading")}</h2>
+        </div>
+        <div class="saved-actions">
+          <button id="saved-calendar" class={uiClass.control} type="button" hidden>
+            <span class="ic ic-calendar"></span><span data-i18n="saved.calendar">{t("saved.calendar")}</span>
+          </button>
+          <button id="saved-past" class={uiClass.control} type="button" aria-pressed="false" hidden data-i18n="saved.past">{t("saved.past")}</button>
+        </div>
+      </div>
+      <div id="saved-results" class="mt-3 grid gap-2.5"></div>
+      <p id="saved-empty" class="mt-6 text-center text-[var(--color-muted)]" data-i18n="saved.empty">{t("saved.empty")}</p>
+    </section>
+
+    <!-- ===== AUTHOR ===== -->
+    <section id="view-author" data-view="author" hidden>
+      <div class="view-head sticky-view-head">
+        <div class="profile-title-row">
+          <button id="author-list-trigger" class={cx("view-kind-link", uiClass.ui)} type="button" data-i18n="view.authors">{t("view.authors")}</button>
+          <h2 id="author-title" class={cx("saved-title", uiClass.section)}></h2>
+        </div>
+        <div class="profile-actions">
+          <div id="author-links" class="profile-links"></div>
+        </div>
+      </div>
+      <div id="author-events" class="timeline-list mt-3 grid gap-2.5"></div>
+    </section>
+
+    <!-- ===== VENUE ===== -->
+    <section id="view-venue" data-view="venue" hidden>
+      <div class="view-head sticky-view-head">
+        <div class="venue-title-row">
+          <button id="venue-list-trigger" class={cx("view-kind-link", uiClass.ui)} type="button" data-i18n="view.venue">{t("view.venue")}</button>
+          <div id="venue-swipe" class="venue-swipe" role="group" aria-label="Ort wechseln">
+            <button id="venue-prev" class="venue-step venue-step-prev" type="button" aria-label="Vorheriger Ort">‹</button>
+            <div id="venue-title-track" class="venue-title-track">
+              <span id="venue-index" class={uiClass.index} hidden></span>
+              <h2 id="venue-title" class={cx("saved-title", uiClass.section)}></h2>
+            </div>
+            <span id="venue-next-index" class="venue-peek venue-peek-next" aria-hidden="true"></span>
+            <button id="venue-next" class="venue-step venue-step-next" type="button" aria-label="Nächster Ort">›</button>
+          </div>
+        </div>
+        <p id="venue-accessibility" class={cx("access-note", uiClass.meta)} hidden></p>
+      </div>
+      <div id="venue-events" class="timeline-list mt-3 grid gap-2.5"></div>
+    </section>
+
+    <!-- ===== EVENT ===== -->
+    <section id="view-event" data-view="event" hidden>
+      <div class="view-head sticky-view-head event-view-head">
+        <p id="event-when" class={cx("event-when", uiClass.clock)}></p>
+        <div id="event-info" class="event-info"></div>
+        <div class="event-title-row">
+          <h2 id="event-title" class={cx("saved-title event-title", uiClass.section)}></h2>
+          <button id="event-save" class="bookmark-entry event-title-bookmark" type="button" aria-label={t("card.bookmark")} title={t("card.bookmark")} hidden>
+            <span class="ic ic-bookmark"></span>
+          </button>
+        </div>
+        <p id="event-book-author" class="event-book-author" hidden></p>
+        <div id="event-meta" class="event-info event-meta"></div>
+        <button id="event-route" class={cx(uiClass.actionRow, "event-action-route event-route-inline")} type="button" aria-label={t("venue.route")} title={t("venue.route")} hidden>
+          <span data-i18n="venue.route">{t("venue.route")}</span><span class="ic ic-pin"></span>
+        </button>
+        <p id="event-accessibility" class={cx("access-note", uiClass.meta)} hidden></p>
+        <div class="event-actions">
+          <button id="event-share" class={uiClass.actionRow} type="button" aria-label={t("share.view")} title={t("share.view")} hidden>
+            <span data-i18n="share.view">{t("share.view")}</span><span class="ic ic-message"></span>
+          </button>
+          <button id="event-calendar" class={uiClass.actionRow} type="button" aria-label={t("saved.calendar")} title={t("saved.calendar")} hidden>
+            <span data-i18n="saved.calendar">{t("saved.calendar")}</span><span class="ic ic-calendar"></span>
+          </button>
+        </div>
+        <a id="event-source" class={cx("event-info-line event-source-link", uiClass.meta)} href={sourceUrl} target="_blank" rel="noopener">
+          <span class="ic ic-ext"></span><span data-i18n="card.source">{t("card.source")}</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="thumb-actions" aria-label={t("nav.program")}>
+    <button id="now-jump" class={cx(uiClass.fab, "thumb-jump-now")} type="button" aria-label={t("jump.next")} title={t("jump.next")}>
+      <span class="ic ic-now"></span>
+      <span class="thumb-label" data-i18n="now.live">{t("now.live")}</span>
+    </button>
+    <button id="nearby-jump" class={cx(uiClass.fab, "thumb-jump-nearby")} type="button" aria-label={t("nearby.heading")} title={t("nearby.heading")} hidden>
+      <span class="ic ic-pin"></span>
+      <span class="thumb-label" data-i18n="nearby.heading">{t("nearby.heading")}</span>
+    </button>
+    <button id="saved-jump" class={cx(uiClass.fab, "thumb-jump-bookmarks")} type="button" aria-label={t("nav.saved")} title={t("nav.saved")}>
+      <span class="ic ic-bookmark"></span>
+      <span class="thumb-label" data-i18n="nav.saved">{t("nav.saved")}</span>
+    </button>
+    <button id="route-jump" class={cx(uiClass.fab, "thumb-jump-route")} type="button" aria-label={t("venue.route")} title={t("venue.route")} hidden>
+      <span class="ic ic-pin"></span>
+      <span class="thumb-label" data-i18n="venue.route">{t("venue.route")}</span>
+    </button>
+    <button id="view-share-jump" class={cx(uiClass.fab, "thumb-jump-share")} type="button" aria-label={t("share.view")} title={t("share.view")} hidden>
+      <span class="ic ic-message"></span>
+      <span class="thumb-label" data-i18n="share.view">{t("share.view")}</span>
+    </button>
+  </div>
+
+  <dialog id="route-modal" class="sheet">
+    <div class="sheet-body">
+      <div class={uiClass.sheetHead}><b data-i18n="route.choose">{t("route.choose")}</b><button class="sheet-x" data-close type="button" aria-label="close">✕</button></div>
+      <div class="route-options">
+        <a id="route-apple" class={cx(uiClass.control, "route-option")} href="#" rel="noopener" data-route-provider="apple" aria-pressed="false" data-i18n="route.apple">{t("route.apple")}</a>
+        <a id="route-google" class={cx(uiClass.control, "route-option")} href="#" target="_blank" rel="noopener" data-route-provider="google" aria-pressed="false" data-i18n="route.google">{t("route.google")}</a>
+      </div>
+      <label class={cx("route-save", uiClass.meta)}>
+        <input id="route-save" type="checkbox" />
+        <span data-i18n="route.saveSelection">{t("route.saveSelection")}</span>
+      </label>
+    </div>
+  </dialog>
+
+  <script type="application/json" id="lfm-dist" set:html={JSON.stringify(distances)}></script>
+  <script type="application/json" id="lfm-meta" set:html={JSON.stringify(meta)}></script>
+  <script type="application/json" id="lfm-labels" set:html={JSON.stringify({ days: days.map((d) => ({ date: d.date, label: dayLabel(d.weekday, d.date) })), venues: Object.fromEntries(venues.map((v) => [v.key, (v.no ? v.no + " — " : "") + v.venue])), venueAccessibility: VENUE_ACCESSIBILITY })}></script>
+  <script type="application/json" id="lfm-people" set:html={JSON.stringify({ profiles: authorProfiles })}></script>
+  <script>
+    import { initApp } from "../scripts/app";
+    initApp();
+  </script>
+</body>
+</html>

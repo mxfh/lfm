@@ -1,0 +1,32 @@
+# build output
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# os / editor
+.DS_Store
+*.local
+*.log
+
+# secrets (optional routing key etc.)
+.env
+.env.*
+!.env.example
+
+# public/data/ is intentionally tracked (small, derived, needed at build time)
+
+# prep/ holds QA + raw artifacts; keep curated *.json overrides, ignore the rest
+prep/*.jpg
+prep/*.png
+prep/*.html
+prep/*.md
+prep/*.log
+prep/*.overpass.json
+prep/source-mirror/
+
+# test artifacts
+test-results/
+playwright-report/
+.playwright-mcp/

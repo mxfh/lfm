@@ -1,0 +1,545 @@
+{
+  "attribution": "© OpenStreetMap contributors (geocoded via Nominatim)",
+  "venues": [
+    {
+      "key": "1",
+      "no": "1",
+      "venue": "Wendelsteinkeller, Albrechtsburg",
+      "query": "Albrechtsburg, 01662 Meißen, Deutschland",
+      "lat": 51.1667295,
+      "lon": 13.4712655,
+      "display": "Albrechtsburg, 1, Domplatz, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "2",
+      "no": "2",
+      "venue": "Kändlerhaus, Domplatz 8",
+      "query": "Domplatz 8, 01662 Meißen, Deutschland",
+      "lat": 51.1656997,
+      "lon": 13.4707438,
+      "display": "8, Domplatz, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "3",
+      "no": "3",
+      "venue": "Podologie Kreuzritter, Nossener Str 56",
+      "query": "Nossener Straße 56, 01662 Meißen, Deutschland",
+      "lat": 51.1601964,
+      "lon": 13.460161,
+      "display": "56, Nossener Straße, Rauenthal, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "4",
+      "no": "4",
+      "venue": "Jahnaischer Freihof, Freiheit 1",
+      "query": "Jahnaischer Freihof, Freiheit 1, 01662 Meißen, Deutschland",
+      "lat": 51.1646633,
+      "lon": 13.4685011,
+      "display": "Jahnaischer Freihof, 1, Freiheit, Niedermeisa, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "5",
+      "no": "5",
+      "venue": "Prälatenhaus, Rote Stufen 3",
+      "query": "Prälatenhaus, Rote Stufen 3, 01662 Meißen, Deutschland",
+      "lat": 51.1649161,
+      "lon": 13.4696028,
+      "display": "Prälatenhaus, 3, Rote Stufen, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "6",
+      "no": "6",
+      "venue": "Schlossberg 3",
+      "query": "Schlossberg 3, 01662 Meißen, Deutschland",
+      "lat": 51.1651782,
+      "lon": 13.4708994,
+      "display": "3, Schloßberg, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "7",
+      "no": "7",
+      "venue": "Amtsstufen – Weinberg",
+      "query": "Amtsstufen – Weinberg, 01662 Meißen, Deutschland",
+      "lat": 51.16602,
+      "lon": 13.47228,
+      "display": "Amtsstufen / Weinberg (Burgberg-Südseite)",
+      "source": "override"
+    },
+    {
+      "key": "8",
+      "no": "8",
+      "venue": "Rotary Club, Leipziger Str 24",
+      "query": "Leipziger Straße 24, 01662 Meißen, Deutschland",
+      "lat": 51.1656194,
+      "lon": 13.4730742,
+      "display": "24, Leipziger Straße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "9",
+      "no": "9",
+      "venue": "Weinladen, Burgstr 18",
+      "query": "Burgstraße 18, 01662 Meißen, Deutschland",
+      "lat": 51.1642403,
+      "lon": 13.4701486,
+      "display": "Burgstraße 18, 8, Burgstraße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "10",
+      "no": "10",
+      "venue": "LieblingsOrt Burgstr 22",
+      "query": "Burgstraße 22, 01662 Meißen, Deutschland",
+      "lat": 51.1644909,
+      "lon": 13.4704641,
+      "display": "22, Burgstraße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "11",
+      "no": "11",
+      "venue": "Laurentii Residenz, Baderberg 9",
+      "query": "Baderberg 9, 01662 Meißen, Deutschland",
+      "lat": 51.1647367,
+      "lon": 13.471916,
+      "display": "9, Baderberg, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "12",
+      "no": "12",
+      "venue": "Anneli-Marie-Stiftung, Leipziger Str 12",
+      "query": "Leipziger Straße 12, 01662 Meißen, Deutschland",
+      "lat": 51.1646744,
+      "lon": 13.472857,
+      "display": "12, Leipziger Straße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "13",
+      "no": "13",
+      "venue": "Zahnrad & Zylinder Burgstr 27",
+      "query": "Burgstraße 27, 01662 Meißen, Deutschland",
+      "lat": 51.1641989,
+      "lon": 13.4703956,
+      "display": "27, Burgstraße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "14",
+      "no": "14",
+      "venue": "TREFF25, Theaterplatz 4",
+      "query": "Theaterplatz 4, 01662 Meißen, Deutschland",
+      "lat": 51.1642958,
+      "lon": 13.4721769,
+      "display": "4, Theaterplatz, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "15",
+      "no": "15",
+      "venue": "Kunstverein, Burgstr 2",
+      "query": "Burgstraße 2, 01662 Meißen, Deutschland",
+      "lat": 51.1634792,
+      "lon": 13.4698644,
+      "display": "2, Burgstraße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "16",
+      "no": "16",
+      "venue": "Atelier unARTich, Burgstr 30",
+      "query": "Burgstraße 30, 01662 Meißen, Deutschland",
+      "lat": 51.1638885,
+      "lon": 13.4703203,
+      "display": "30, Burgstraße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "17",
+      "no": "17",
+      "venue": "Lorenzgasse 2",
+      "query": "Lorenzgasse 2, 01662 Meißen, Deutschland",
+      "lat": 51.163783,
+      "lon": 13.4716159,
+      "display": "2, Lorenzgasse, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "18",
+      "no": "18",
+      "venue": "Grüner Laden, Leipziger Str 1",
+      "query": "Leipziger Straße 1, 01662 Meißen, Deutschland",
+      "lat": 51.1638399,
+      "lon": 13.4722935,
+      "display": "1, Leipziger Straße, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "19",
+      "no": "19",
+      "venue": "Atelier federleicht, An der Frauenkirche 11",
+      "query": "An der Frauenkirche 11, 01662 Meißen, Deutschland",
+      "lat": 51.1627872,
+      "lon": 13.4696109,
+      "display": "Ehemaliges Pfarramt Evangelisch-Lutherische Kirchgemeinde St. Afra Meißen, 11, An der Frauenkirche, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "20",
+      "no": "20",
+      "venue": "Garten Freiheit 11",
+      "query": "Garten Freiheit 11, 01662 Meißen, Deutschland",
+      "lat": 51.16241,
+      "lon": 13.4684,
+      "display": "Garten Freiheit 11",
+      "source": "override"
+    },
+    {
+      "key": "21",
+      "no": "21",
+      "venue": "Frauenkirche",
+      "query": "Frauenkirche, 01662 Meißen, Deutschland",
+      "lat": 51.162684,
+      "lon": 13.4699859,
+      "display": "Frauenkirche, 13, An der Frauenkirche, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "22",
+      "no": "22",
+      "venue": "SEEG Eventraum am Tuchmachertor",
+      "query": "SEEG Eventraum am Tuchmachertor, 01662 Meißen, Deutschland",
+      "lat": 51.16237,
+      "lon": 13.46971,
+      "display": "SEEG Eventraum am Tuchmachertor",
+      "source": "override"
+    },
+    {
+      "key": "23",
+      "no": "23",
+      "venue": "Stadtmuseum Heinrichsplatz",
+      "query": "Stadtmuseum Heinrichsplatz, 01662 Meißen, Deutschland",
+      "lat": 51.163203,
+      "lon": 13.4725792,
+      "display": "Stadtmuseum Meißen, 3, Heinrichsplatz, Triebischvorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "24",
+      "no": "24",
+      "venue": "Kinderbibliothek",
+      "query": "Kinderbibliothek, 01662 Meißen, Deutschland",
+      "lat": 51.16293,
+      "lon": 13.47253,
+      "display": "Kinderbibliothek — Stadtbibliothek, Kleinmarkt 5",
+      "source": "override"
+    },
+    {
+      "key": "25",
+      "no": "25",
+      "venue": "Kleinmarkt",
+      "query": "Kleinmarkt, 01662 Meißen, Deutschland",
+      "lat": 51.16258,
+      "lon": 13.47195,
+      "display": "Kleinmarkt — neben Kleinmarktschänke gepinnt",
+      "source": "override"
+    },
+    {
+      "key": "26",
+      "no": "26",
+      "venue": "Kleinmarktschänke",
+      "query": "Kleinmarktschänke, 01662 Meißen, Deutschland",
+      "lat": 51.16252,
+      "lon": 13.4718427,
+      "display": "Kleinmarktschänke, 10, Kleinmarkt, Triebischvorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "27",
+      "no": "27",
+      "venue": "Kaffee- und Weinstube, Fleischergasse 4",
+      "query": "Fleischergasse 4, 01662 Meißen, Deutschland",
+      "lat": 51.1623705,
+      "lon": 13.4709911,
+      "display": "4, Fleischergasse, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "28",
+      "no": "28",
+      "venue": "LiteraturBus der VGM, Rossmarkt",
+      "query": "Rossmarkt, 01662 Meißen, Deutschland",
+      "lat": 51.1620942,
+      "lon": 13.4722595,
+      "display": "Roßmarkt, Triebischvorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "29",
+      "no": "29",
+      "venue": "Thürmer Pianoforte Museum, Martinstr 12",
+      "query": "Martinstraße 12, 01662 Meißen, Deutschland",
+      "lat": 51.1620869,
+      "lon": 13.4733303,
+      "display": "12, Martinstraße, Triebischvorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "30",
+      "no": "30",
+      "venue": "PorzellanCafé Weißer Elefant, Görnische Gasse 4",
+      "query": "Görnische Gasse 4, 01662 Meißen, Deutschland",
+      "lat": 51.1616222,
+      "lon": 13.4706947,
+      "display": "4, Görnische Gasse, Görnische Vorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "31",
+      "no": "31",
+      "venue": "Bäckermeisters Innenhof, Neugasse 54",
+      "query": "Neugasse 54, 01662 Meißen, Deutschland",
+      "lat": 51.1616646,
+      "lon": 13.4715993,
+      "display": "54, Neugasse, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "32",
+      "no": "32",
+      "venue": "Atelier A. Ehret, Görnische Gasse 6",
+      "query": "Görnische Gasse 6, 01662 Meißen, Deutschland",
+      "lat": 51.1613924,
+      "lon": 13.4704721,
+      "display": "6, Görnische Gasse, Görnische Vorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "33",
+      "no": "33",
+      "venue": "Galerie Himmlisch, Görnische Gasse Ecke Jüdenbergstr",
+      "query": "Görnische Gasse, 01662 Meißen, Deutschland",
+      "lat": 51.1612257,
+      "lon": 13.469818,
+      "display": "Galerie Himmlisch — Google Maps Place",
+      "source": "override"
+    },
+    {
+      "key": "34",
+      "no": "34",
+      "venue": "Jahnhalle, Schreberstr 37",
+      "query": "Jahnhalle, Schreberstraße 37, 01662 Meißen, Deutschland",
+      "lat": 51.1604375,
+      "lon": 13.4682246,
+      "display": "Jahnhalle, 37, Schreberstraße, Görnische Vorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "35",
+      "no": "35",
+      "venue": "Rauhentalstr 97",
+      "query": "Rauhentalstraße 97, 01662 Meißen, Deutschland",
+      "lat": 51.1574336,
+      "lon": 13.4529451,
+      "display": "97, Rauhentalstraße, Rauenthal, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "36",
+      "no": "36",
+      "venue": "KAFF / Projekt UM-Triebisch, Wilhelm-Walkhoff-Platz",
+      "query": "Wilhelm-Walkhoff-Platz, 01662 Meißen, Deutschland",
+      "lat": 51.15327,
+      "lon": 13.45861,
+      "display": "KAFF — Nordecke der Lutherkirche, Triebischtal (corrected from Nominatim)",
+      "source": "override"
+    },
+    {
+      "key": "37",
+      "no": "37",
+      "venue": "Schmuckhof der Porzellan-Manufaktur und Erlebniswelt MEISSEN, Talstr 9",
+      "query": "Talstraße 9, 01662 Meißen, Deutschland",
+      "lat": 51.1562596,
+      "lon": 13.464403,
+      "display": "9, Talstraße, Rauenthal, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "38",
+      "no": "38",
+      "venue": "Büro Die Linke, Neugasse 15",
+      "query": "Neugasse 15, 01662 Meißen, Deutschland",
+      "lat": 51.160349,
+      "lon": 13.4708328,
+      "display": "15, Neugasse, Görnische Vorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "39",
+      "no": "39",
+      "venue": "Hahnemannhaus, Neumarkt 59",
+      "query": "Neumarkt 59, 01662 Meißen, Deutschland",
+      "lat": 51.1606742,
+      "lon": 13.4730892,
+      "display": "59, Neumarkt, Triebischvorstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "40",
+      "no": "40",
+      "venue": "KulturCafé Schiffchen, Siebeneichener Str 2-3",
+      "query": "Siebeneichener Straße 2-3, 01662 Meißen, Deutschland",
+      "lat": 51.1616608,
+      "lon": 13.4768134,
+      "display": "KulturCafé Schiffchen — Google Maps Place",
+      "source": "override"
+    },
+    {
+      "key": "41",
+      "no": "41",
+      "venue": "Pfadfinderheim Weinberggasse 3A",
+      "query": "Pfadfinderheim Weinberggasse 3A, 01662 Meißen, Deutschland",
+      "lat": 51.1650995,
+      "lon": 13.4782539,
+      "display": "Pfadfinderheim CPD Paul Richter Meißen, 3a, Weinberggasse, Niederfähre, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "42",
+      "no": "42",
+      "venue": "Empfangshalle Bahnhof Meißen",
+      "query": "Empfangshalle Bahnhof Meißen, 01662 Meißen, Deutschland",
+      "lat": 51.1630009,
+      "lon": 13.4829407,
+      "display": "Empfangshalle Bahnhof Meißen — Google Maps Bahnhof-Meißen Place",
+      "source": "override"
+    },
+    {
+      "key": "43",
+      "no": "43",
+      "venue": "Bootshaus, Plangasse 7",
+      "query": "Plangasse 7, 01662 Meißen, Deutschland",
+      "lat": 51.1613166,
+      "lon": 13.4810443,
+      "display": "SG Kanu Meißen e.V, 7, Plangasse, Vorbrücke, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "44",
+      "no": "44",
+      "venue": "Kallaputschni, Dresdner Str 12",
+      "query": "Dresdner Straße 12, 01662 Meißen, Deutschland",
+      "lat": 51.1615556,
+      "lon": 13.4821279,
+      "display": "12, Dresdner Straße, Vorbrücke, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "45",
+      "no": "45",
+      "venue": "Urbanskirche, Dresdner Str 19",
+      "query": "Dresdner Straße 19, 01662 Meißen, Deutschland",
+      "lat": 51.1592809,
+      "lon": 13.4843508,
+      "display": "St. Urbanskirche Meißen — Google Maps Place",
+      "source": "override"
+    },
+    {
+      "key": "46",
+      "no": "46",
+      "venue": "Johanneskirche",
+      "query": "Johanneskirche, 01662 Meißen, Deutschland",
+      "lat": 51.1593567,
+      "lon": 13.4864481,
+      "display": "Johanneskirche, 1, Johannesplatz, Cölln, Nassau, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "47",
+      "no": "47",
+      "venue": "Senioren-Park carpe diem, Dresdner Str 34",
+      "query": "Dresdner Straße 34, 01662 Meißen, Deutschland",
+      "lat": 51.1583759,
+      "lon": 13.4825094,
+      "display": "Seniorenpark Carpe Diem, 34, Dresdner Straße, Cölln, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    },
+    {
+      "key": "48",
+      "no": "48",
+      "venue": "AWO Dresdner Straße 50e",
+      "query": "AWO Dresdner Straße 50e, 01662 Meißen, Deutschland",
+      "lat": 51.15622,
+      "lon": 13.48466,
+      "display": "AWO, Dresdner Straße 50, Cölln",
+      "source": "override"
+    },
+    {
+      "key": "B1",
+      "no": "B1",
+      "venue": "Bühne Markt",
+      "query": "Bühne Markt, 01662 Meißen, Deutschland",
+      "lat": 51.16328,
+      "lon": 13.47047,
+      "display": "Bühne Markt — Markt (Platz)",
+      "source": "override"
+    },
+    {
+      "key": "B2",
+      "no": "B2",
+      "venue": "Bühne Heinrichsplatz",
+      "query": "Bühne Heinrichsplatz, 01662 Meißen, Deutschland",
+      "lat": 51.16328,
+      "lon": 13.47238,
+      "display": "Bühne Heinrichsplatz",
+      "source": "override"
+    },
+    {
+      "key": "B3",
+      "no": "B3",
+      "venue": "Kinderbühne Tuchmachertor",
+      "query": "Kinderbühne Tuchmachertor, 01662 Meißen, Deutschland",
+      "lat": 51.16237,
+      "lon": 13.46971,
+      "display": "Kinderbühne Tuchmachertor",
+      "source": "override"
+    },
+    {
+      "key": "B4",
+      "no": "B4",
+      "venue": "Interkulturelle Bühne Schulplatz",
+      "query": "Interkulturelle Bühne Schulplatz, 01662 Meißen, Deutschland",
+      "lat": 51.16305,
+      "lon": 13.47282,
+      "display": "Interkulturelle Bühne — Schulplatz (näher an Kinderbibliothek/Kleinmarkt gepinnt)",
+      "source": "override"
+    },
+    {
+      "key": "B5",
+      "no": "B5",
+      "venue": "Krimibühne Theaterplatz",
+      "query": "Krimibühne Theaterplatz, 01662 Meißen, Deutschland",
+      "lat": 51.16484,
+      "lon": 13.47217,
+      "display": "Krimibühne Theaterplatz",
+      "source": "override"
+    },
+    {
+      "key": "Rathaus (Innenhof)",
+      "no": "",
+      "venue": "Rathaus (Innenhof)",
+      "query": "Rathaus, 01662 Meißen, Deutschland",
+      "lat": 51.1634109,
+      "lon": 13.4705088,
+      "display": "Rathaus Meißen, 1, Markt, Altstadt, Meißen, Sachsen, 01662, Deutschland",
+      "source": "nominatim"
+    }
+  ]
+}
