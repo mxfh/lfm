@@ -1,0 +1,1275 @@
+{
+  "attribution": "Autorenlinks: Wikipedia (CC BY-SA)",
+  "authors": {
+    "Adolph Freiherr von Knigge": {
+      "name": "Adolph Freiherr von Knigge",
+      "url": "https://de.wikipedia.org/wiki/Adolph_Knigge",
+      "basis": "name+work"
+    },
+    "Ak Welsapar": {
+      "name": "Ak Welsapar",
+      "url": "https://de.wikipedia.org/wiki/Ak_Welsapar",
+      "basis": "name"
+    },
+    "Albrecht Goette": {
+      "name": "Albrecht Goette",
+      "url": "https://de.wikipedia.org/wiki/Albrecht_Goette",
+      "basis": "name"
+    },
+    "Alina Bronsky": {
+      "name": "Alina Bronsky",
+      "url": "https://de.wikipedia.org/wiki/Alina_Bronsky",
+      "basis": "name"
+    },
+    "Andreas Buchwald": {
+      "name": "Andreas Buchwald",
+      "url": null,
+      "basis": ""
+    },
+    "Andrej Kurkow": {
+      "name": "Andrej Kurkow",
+      "url": null,
+      "basis": ""
+    },
+    "Andris Kalnozols und Sven Otto": {
+      "name": "Andris Kalnozols",
+      "url": null,
+      "basis": ""
+    },
+    "André Guhr": {
+      "name": "André Guhr",
+      "url": null,
+      "basis": ""
+    },
+    "Anett Steiner": {
+      "name": "Anett Steiner",
+      "url": null,
+      "basis": ""
+    },
+    "Angelika Hänke": {
+      "name": "Angelika Hänke",
+      "url": null,
+      "basis": ""
+    },
+    "Angestellte der Deutschen Bahn": {
+      "name": "Angestellte der Deutschen Bahn",
+      "url": null,
+      "basis": ""
+    },
+    "Anja Heber": {
+      "name": "Anja Heber",
+      "url": null,
+      "basis": ""
+    },
+    "Anja Kampmann": {
+      "name": "Anja Kampmann",
+      "url": "https://de.wikipedia.org/wiki/Anja_Kampmann",
+      "basis": "name"
+    },
+    "Anja Otto-Ebermann": {
+      "name": "Anja Otto-Ebermann",
+      "url": null,
+      "basis": ""
+    },
+    "Anja Stein, Claudia Hultsch und Elke Siebert": {
+      "name": "Anja Stein",
+      "url": null,
+      "basis": ""
+    },
+    "Anja Weidemann": {
+      "name": "Anja Weidemann",
+      "url": null,
+      "basis": ""
+    },
+    "Anja Zimmer": {
+      "name": "Anja Zimmer",
+      "url": "https://de.wikipedia.org/wiki/Anja_Zimmer",
+      "basis": "name"
+    },
+    "Anja Zimmer und Tempus Manet": {
+      "name": "Anja Zimmer",
+      "url": "https://de.wikipedia.org/wiki/Anja_Zimmer",
+      "basis": "name"
+    },
+    "Anna Zepnick (Andreas Altmann – entfällt)": {
+      "name": "Anna Zepnick",
+      "url": null,
+      "basis": ""
+    },
+    "Annette Wippler": {
+      "name": "Annette Wippler",
+      "url": null,
+      "basis": ""
+    },
+    "Antje Walter": {
+      "name": "Antje Walter",
+      "url": null,
+      "basis": ""
+    },
+    "Astrid Winkler und Christof Voigt": {
+      "name": "Astrid Winkler",
+      "url": null,
+      "basis": ""
+    },
+    "Autor Prinz Rupi": {
+      "name": "Prinz Rupi",
+      "url": null,
+      "basis": ""
+    },
+    "Autorin Undine Materni": {
+      "name": "Undine Materni",
+      "url": "https://de.wikipedia.org/wiki/Undine_Materni",
+      "basis": "name"
+    },
+    "Beate Baum": {
+      "name": "Beate Baum",
+      "url": "https://de.wikipedia.org/wiki/Beate_Baum",
+      "basis": "name"
+    },
+    "Beate Rosrodowski": {
+      "name": "Beate Rosrodowski",
+      "url": null,
+      "basis": ""
+    },
+    "Bernd Stahr (Das Meißner Obscurum)": {
+      "name": "Bernd Stahr",
+      "url": null,
+      "basis": ""
+    },
+    "Bettina Hirschberg und Harry Düll": {
+      "name": "Bettina Hirschberg",
+      "url": null,
+      "basis": ""
+    },
+    "Betty Boras": {
+      "name": "Betty Boras",
+      "url": null,
+      "basis": ""
+    },
+    "Bianca Wunderwald": {
+      "name": "Bianca Wunderwald",
+      "url": null,
+      "basis": ""
+    },
+    "Birgit Jasmund": {
+      "name": "Birgit Jasmund",
+      "url": null,
+      "basis": ""
+    },
+    "Birgit Poppe": {
+      "name": "Birgit Poppe",
+      "url": null,
+      "basis": ""
+    },
+    "Carla Doerffel": {
+      "name": "Carla Doerffel",
+      "url": null,
+      "basis": ""
+    },
+    "Chajim Harald Grosser": {
+      "name": "Chajim Harald Grosser",
+      "url": null,
+      "basis": ""
+    },
+    "Christian Engelken": {
+      "name": "Christian Engelken",
+      "url": "https://de.wikipedia.org/wiki/Christian_Engelken",
+      "basis": "name"
+    },
+    "Christian Steyer und Siegfried Kühn": {
+      "name": "Christian Steyer",
+      "url": "https://de.wikipedia.org/wiki/Christian_Steyer",
+      "basis": "name"
+    },
+    "Christina Koenig": {
+      "name": "Christina Koenig",
+      "url": null,
+      "basis": ""
+    },
+    "Christine von Brühl und Sven Bernitt": {
+      "name": "Christine von Brühl",
+      "url": "https://de.wikipedia.org/wiki/Christine_von_Br%C3%BChl",
+      "basis": "name"
+    },
+    "Daniela Kuge": {
+      "name": "Daniela Kuge",
+      "url": "https://de.wikipedia.org/wiki/Daniela_Kuge",
+      "basis": "name"
+    },
+    "Daniela Pörtl und Olaf Thiel": {
+      "name": "Daniela Pörtl",
+      "url": null,
+      "basis": ""
+    },
+    "Das Kunstkollektiv Flötenfett": {
+      "name": "Das Kunstkollektiv Flötenfett",
+      "url": null,
+      "basis": ""
+    },
+    "David Wojnarowicz": {
+      "name": "David Wojnarowicz",
+      "url": "https://de.wikipedia.org/wiki/David_Wojnarowicz",
+      "basis": "name"
+    },
+    "Day Moreno & Sylvia Spargen (Diakonie Meißen)": {
+      "name": "Day Moreno",
+      "url": null,
+      "basis": ""
+    },
+    "Der Meißner Oberbürgermeister Markus Renner": {
+      "name": "Der Meißner Oberbürgermeister Markus Renner",
+      "url": null,
+      "basis": ""
+    },
+    "Der StadtElternRat": {
+      "name": "Der StadtElternRat",
+      "url": null,
+      "basis": ""
+    },
+    "Der StädtePartnerschaftsVerein und die Stadt Meißen": {
+      "name": "Der StädtePartnerschaftsVerein",
+      "url": null,
+      "basis": ""
+    },
+    "Der blinde Vorleser Christian Spremberg": {
+      "name": "Der blinde Vorleser Christian Spremberg",
+      "url": null,
+      "basis": ""
+    },
+    "Die Frauen des Lionsclub Meißen-Domstadt": {
+      "name": "Die Frauen des Lionsclub Meißen-Domstadt",
+      "url": null,
+      "basis": ""
+    },
+    "Die Pfadfinder": {
+      "name": "Die Pfadfinder",
+      "url": null,
+      "basis": ""
+    },
+    "Die Riesaer Lese-Eulen": {
+      "name": "Die Riesaer Lese-Eulen",
+      "url": null,
+      "basis": ""
+    },
+    "Die reisende Familie Wagner": {
+      "name": "Die reisende Familie Wagner",
+      "url": null,
+      "basis": ""
+    },
+    "Dieter Gruner": {
+      "name": "Dieter Gruner",
+      "url": "https://de.wikipedia.org/wiki/Dieter_Gruner",
+      "basis": "name"
+    },
+    "Dietrich Frank": {
+      "name": "Dietrich Frank",
+      "url": null,
+      "basis": ""
+    },
+    "Dominik Brun": {
+      "name": "Dominik Brun",
+      "url": "https://de.wikipedia.org/wiki/Dominik_Brun",
+      "basis": "name"
+    },
+    "Douglas Adams": {
+      "name": "Douglas Adams",
+      "url": "https://de.wikipedia.org/wiki/Douglas_Adams",
+      "basis": "name+work"
+    },
+    "Dr. Wolfgang Fischer": {
+      "name": "Wolfgang Fischer",
+      "url": null,
+      "basis": ""
+    },
+    "Dr.Dr.h.c. Norbert Herrmann": {
+      "name": "Dr.Dr.h.c. Norbert Herrmann",
+      "url": null,
+      "basis": ""
+    },
+    "Dulce Chacón": {
+      "name": "Dulce Chacón",
+      "url": "https://de.wikipedia.org/wiki/Dulce_Chac%C3%B3n",
+      "basis": "name"
+    },
+    "Duo Salamandro": {
+      "name": "Duo Salamandro",
+      "url": null,
+      "basis": ""
+    },
+    "E.T.A. Hoffmann": {
+      "name": "E.T.A. Hoffmann",
+      "url": "https://de.wikipedia.org/wiki/E._T._A._Hoffmann",
+      "basis": "name"
+    },
+    "Edgar Bernardi": {
+      "name": "Edgar Bernardi",
+      "url": null,
+      "basis": ""
+    },
+    "Edson Incopté und die Übersetzerinnen (Portugiesisch) Rosa Rodrigues und Renate Heß": {
+      "name": "Edson Incopté",
+      "url": null,
+      "basis": ""
+    },
+    "Elke Heidenreich": {
+      "name": "Elke Heidenreich",
+      "url": "https://de.wikipedia.org/wiki/Elke_Heidenreich",
+      "basis": "name"
+    },
+    "Elke Siebert": {
+      "name": "Elke Siebert",
+      "url": null,
+      "basis": ""
+    },
+    "ElviEra Kensche": {
+      "name": "ElviEra Kensche",
+      "url": null,
+      "basis": ""
+    },
+    "Ev. Kinderhaus Gabenreich Weinböhla": {
+      "name": "Ev. Kinderhaus Gabenreich Weinböhla",
+      "url": null,
+      "basis": ""
+    },
+    "Eva Erben": {
+      "name": "Eva Erben",
+      "url": "https://de.wikipedia.org/wiki/Eva_Erben",
+      "basis": "name+work"
+    },
+    "Eva Gengler": {
+      "name": "Eva Gengler",
+      "url": null,
+      "basis": ""
+    },
+    "Eyk Akansu": {
+      "name": "Eyk Akansu",
+      "url": null,
+      "basis": ""
+    },
+    "Felice von Senkbeil": {
+      "name": "Felice von Senkbeil",
+      "url": null,
+      "basis": ""
+    },
+    "Felicitas Kielinger": {
+      "name": "Felicitas Kielinger",
+      "url": null,
+      "basis": ""
+    },
+    "Frank Buchholz": {
+      "name": "Frank Buchholz",
+      "url": "https://de.wikipedia.org/wiki/Frank_Buchholz",
+      "basis": "name"
+    },
+    "Frank Dingeldey": {
+      "name": "Frank Dingeldey",
+      "url": null,
+      "basis": ""
+    },
+    "Frank Goldammer": {
+      "name": "Frank Goldammer",
+      "url": "https://de.wikipedia.org/wiki/Frank_Goldammer",
+      "basis": "name"
+    },
+    "Frank Richter": {
+      "name": "Frank Richter",
+      "url": null,
+      "basis": ""
+    },
+    "Frauke Angel": {
+      "name": "Frauke Angel",
+      "url": null,
+      "basis": ""
+    },
+    "Freie Autorengruppe Elbtal": {
+      "name": "Freie Autorengruppe Elbtal",
+      "url": null,
+      "basis": ""
+    },
+    "Friederike Hofert": {
+      "name": "Friederike Hofert",
+      "url": null,
+      "basis": ""
+    },
+    "Gabi Hausmann": {
+      "name": "Gabi Hausmann",
+      "url": null,
+      "basis": ""
+    },
+    "Gabi Kluge": {
+      "name": "Gabi Kluge",
+      "url": null,
+      "basis": ""
+    },
+    "Georg Singer": {
+      "name": "Georg Singer",
+      "url": null,
+      "basis": ""
+    },
+    "Gisela Both": {
+      "name": "Gisela Both",
+      "url": null,
+      "basis": ""
+    },
+    "Gundula Sell": {
+      "name": "Gundula Sell",
+      "url": "https://de.wikipedia.org/wiki/Gundula_Sell",
+      "basis": "name"
+    },
+    "Günther Anton Krabbenhöft": {
+      "name": "Günther Anton Krabbenhöft",
+      "url": null,
+      "basis": ""
+    },
+    "HC Schmidt und Liz": {
+      "name": "HC Schmidt",
+      "url": null,
+      "basis": ""
+    },
+    "Hannes Lange": {
+      "name": "Hannes Lange",
+      "url": null,
+      "basis": ""
+    },
+    "Hanns Cibulka": {
+      "name": "Hanns Cibulka",
+      "url": "https://de.wikipedia.org/wiki/Hanns_Cibulka",
+      "basis": "name"
+    },
+    "Hans Jörg Dost": {
+      "name": "Hans Jörg Dost",
+      "url": "https://de.wikipedia.org/wiki/Hans-J%C3%B6rg_Dost",
+      "basis": "name"
+    },
+    "Hans-Christoph von Zahn": {
+      "name": "Hans-Christoph von Zahn",
+      "url": null,
+      "basis": ""
+    },
+    "Hans-Haiko Seifert": {
+      "name": "Hans-Haiko Seifert",
+      "url": null,
+      "basis": ""
+    },
+    "Harald Dovermann": {
+      "name": "Harald Dovermann",
+      "url": null,
+      "basis": ""
+    },
+    "Haruki Murakami": {
+      "name": "Haruki Murakami",
+      "url": "https://de.wikipedia.org/wiki/Haruki_Murakami",
+      "basis": "name"
+    },
+    "Heide Fuhljahn": {
+      "name": "Heide Fuhljahn",
+      "url": null,
+      "basis": ""
+    },
+    "Heinz Kulb": {
+      "name": "Heinz Kulb",
+      "url": null,
+      "basis": ""
+    },
+    "Helmuth Engels und Liedermacherin Maren Petzold": {
+      "name": "Helmuth Engels",
+      "url": null,
+      "basis": ""
+    },
+    "Henning Beck": {
+      "name": "Henning Beck",
+      "url": "https://de.wikipedia.org/wiki/Henning_Beck",
+      "basis": "name"
+    },
+    "Henrik N. Hamann": {
+      "name": "Henrik N. Hamann",
+      "url": null,
+      "basis": ""
+    },
+    "Herfried Münkler": {
+      "name": "Herfried Münkler",
+      "url": "https://de.wikipedia.org/wiki/Herfried_M%C3%BCnkler",
+      "basis": "name"
+    },
+    "Ibuse Masuji": {
+      "name": "Ibuse Masuji",
+      "url": "https://de.wikipedia.org/wiki/Ibuse_Masuji",
+      "basis": "name"
+    },
+    "Ilse Lange": {
+      "name": "Ilse Lange",
+      "url": null,
+      "basis": ""
+    },
+    "Ina Kaiser": {
+      "name": "Ina Kaiser",
+      "url": null,
+      "basis": ""
+    },
+    "Ina Paeth, Uwe Delkus und Matthias Schlicke (Pirna schreibt eV)": {
+      "name": "Ina Paeth",
+      "url": null,
+      "basis": ""
+    },
+    "Ingo Siegner": {
+      "name": "Ingo Siegner",
+      "url": "https://de.wikipedia.org/wiki/Ingo_Siegner",
+      "basis": "name+work"
+    },
+    "Ingrid Boysen": {
+      "name": "Ingrid Boysen",
+      "url": null,
+      "basis": ""
+    },
+    "Irina Scherbakowa": {
+      "name": "Irina Scherbakowa",
+      "url": null,
+      "basis": ""
+    },
+    "Isaac B. Singer": {
+      "name": "Isaac B. Singer",
+      "url": "https://de.wikipedia.org/wiki/Isaac_Bashevis_Singer",
+      "basis": "name"
+    },
+    "Jan Kuhlbrodt": {
+      "name": "Jan Kuhlbrodt",
+      "url": "https://de.wikipedia.org/wiki/Jan_Kuhlbrodt",
+      "basis": "name"
+    },
+    "Jan Lipowski": {
+      "name": "Jan Lipowski",
+      "url": null,
+      "basis": ""
+    },
+    "Jan Peter Schmitten": {
+      "name": "Jan Peter Schmitten",
+      "url": null,
+      "basis": ""
+    },
+    "Jan Schaldach": {
+      "name": "Jan Schaldach",
+      "url": null,
+      "basis": ""
+    },
+    "Jana Hensel": {
+      "name": "Jana Hensel",
+      "url": "https://de.wikipedia.org/wiki/Jana_Hensel",
+      "basis": "name"
+    },
+    "Jana Scheerer": {
+      "name": "Jana Scheerer",
+      "url": "https://de.wikipedia.org/wiki/Jana_Scheerer",
+      "basis": "name"
+    },
+    "Jane Gallin": {
+      "name": "Jane Gallin",
+      "url": null,
+      "basis": ""
+    },
+    "Janet Tamme-Hentzschel": {
+      "name": "Janet Tamme-Hentzschel",
+      "url": null,
+      "basis": ""
+    },
+    "Janmaat der Weber": {
+      "name": "Janmaat der Weber",
+      "url": null,
+      "basis": ""
+    },
+    "Jens Kuhbandner": {
+      "name": "Jens Kuhbandner",
+      "url": null,
+      "basis": ""
+    },
+    "Jens Sparschuh": {
+      "name": "Jens Sparschuh",
+      "url": "https://de.wikipedia.org/wiki/Jens_Sparschuh",
+      "basis": "name"
+    },
+    "Jessica Hamann": {
+      "name": "Jessica Hamann",
+      "url": null,
+      "basis": ""
+    },
+    "Jessy James LaFleur und Natasha Jaffe": {
+      "name": "Jessy James LaFleur",
+      "url": null,
+      "basis": ""
+    },
+    "Joachim Behm": {
+      "name": "Joachim Behm",
+      "url": "https://de.wikipedia.org/wiki/Joachim_Behm",
+      "basis": "name"
+    },
+    "Joachim Burkhardt": {
+      "name": "Joachim Burkhardt",
+      "url": "https://de.wikipedia.org/wiki/Joachim_Burkhardt",
+      "basis": "name"
+    },
+    "Joana Zimmer": {
+      "name": "Joana Zimmer",
+      "url": null,
+      "basis": ""
+    },
+    "Jochen Gutsch": {
+      "name": "Jochen Gutsch",
+      "url": "https://de.wikipedia.org/wiki/Jochen-Martin_Gutsch",
+      "basis": "name"
+    },
+    "John Sauter aka Johnny Katharsis": {
+      "name": "John Sauter aka Johnny Katharsis",
+      "url": null,
+      "basis": ""
+    },
+    "Jona M. Schwartz": {
+      "name": "Jona M. Schwartz",
+      "url": null,
+      "basis": ""
+    },
+    "Julia Strassburg": {
+      "name": "Julia Strassburg",
+      "url": null,
+      "basis": ""
+    },
+    "Juliane Franke": {
+      "name": "Juliane Franke",
+      "url": null,
+      "basis": ""
+    },
+    "Julie Weißbach": {
+      "name": "Julie Weißbach",
+      "url": "https://de.wikipedia.org/wiki/Julie_Wei%C3%9Fbach",
+      "basis": "name"
+    },
+    "Julie Weißbach und Synje Norland": {
+      "name": "Julie Weißbach",
+      "url": "https://de.wikipedia.org/wiki/Julie_Wei%C3%9Fbach",
+      "basis": "name"
+    },
+    "Jürgen Lembcke und Christof Voigt": {
+      "name": "Jürgen Lembcke",
+      "url": null,
+      "basis": ""
+    },
+    "Kaja Sesterhenn": {
+      "name": "Kaja Sesterhenn",
+      "url": null,
+      "basis": ""
+    },
+    "Kanzlei Kotze & Partner": {
+      "name": "Kanzlei Kotze",
+      "url": null,
+      "basis": ""
+    },
+    "Karin Beese": {
+      "name": "Karin Beese",
+      "url": null,
+      "basis": ""
+    },
+    "Katharina Banda": {
+      "name": "Katharina Banda",
+      "url": null,
+      "basis": ""
+    },
+    "Katharina Rudolph": {
+      "name": "Katharina Rudolph",
+      "url": null,
+      "basis": ""
+    },
+    "Katrin Böhmker": {
+      "name": "Katrin Böhmker",
+      "url": null,
+      "basis": ""
+    },
+    "Katrin Markert": {
+      "name": "Katrin Markert",
+      "url": null,
+      "basis": ""
+    },
+    "Katrin Nestler": {
+      "name": "Katrin Nestler",
+      "url": null,
+      "basis": ""
+    },
+    "Katrin Pehla-Döring": {
+      "name": "Katrin Pehla-Döring",
+      "url": null,
+      "basis": ""
+    },
+    "Kerstin Groeper": {
+      "name": "Kerstin Groeper",
+      "url": null,
+      "basis": ""
+    },
+    "Kerstin Hensel": {
+      "name": "Kerstin Hensel",
+      "url": "https://de.wikipedia.org/wiki/Kerstin_Hensel",
+      "basis": "name"
+    },
+    "Khaled Hoseini": {
+      "name": "Khaled Hoseini",
+      "url": null,
+      "basis": ""
+    },
+    "Kinder der Triebischtalschule": {
+      "name": "Kinder der Triebischtalschule",
+      "url": null,
+      "basis": ""
+    },
+    "Kirsten Balbig": {
+      "name": "Kirsten Balbig",
+      "url": null,
+      "basis": ""
+    },
+    "Klaus Stickelbroeck": {
+      "name": "Klaus Stickelbroeck",
+      "url": null,
+      "basis": ""
+    },
+    "Konrad Möhwald, Matthias Weisbach, Tilo Schiemenz": {
+      "name": "Konrad Möhwald",
+      "url": null,
+      "basis": ""
+    },
+    "Kristin Vardi": {
+      "name": "Kristin Vardi",
+      "url": null,
+      "basis": ""
+    },
+    "Küf Kaufmann": {
+      "name": "Küf Kaufmann",
+      "url": "https://de.wikipedia.org/wiki/K%C3%BCf_Kaufmann",
+      "basis": "name"
+    },
+    "Laura Vinogradova, Übersetzerin Lil Reif und Verleger TM Glaw": {
+      "name": "Laura Vinogradova",
+      "url": null,
+      "basis": ""
+    },
+    "Lena Küttner": {
+      "name": "Lena Küttner",
+      "url": null,
+      "basis": ""
+    },
+    "Liah Krömer, der Kinderchor der Musikschule Meißen unter Leitung von Claudia Forberger und begleitet von Christiane Beinhauer am Piano": {
+      "name": "Liah Krömer",
+      "url": null,
+      "basis": ""
+    },
+    "Liane Krüger": {
+      "name": "Liane Krüger",
+      "url": null,
+      "basis": ""
+    },
+    "Liane Leser und Illustratorin Marlen Fischer": {
+      "name": "Liane Leser",
+      "url": null,
+      "basis": ""
+    },
+    "Lil Reif und Verlegerin Barbara Miklaw": {
+      "name": "Lil Reif",
+      "url": null,
+      "basis": ""
+    },
+    "Linda Trillhaase": {
+      "name": "Linda Trillhaase",
+      "url": null,
+      "basis": ""
+    },
+    "Livia Seifert": {
+      "name": "Livia Seifert",
+      "url": null,
+      "basis": ""
+    },
+    "Louise Jacobs": {
+      "name": "Louise Jacobs",
+      "url": null,
+      "basis": ""
+    },
+    "Lukas Rietzschel": {
+      "name": "Lukas Rietzschel",
+      "url": "https://de.wikipedia.org/wiki/Lukas_Rietzschel",
+      "basis": "name"
+    },
+    "MDR-Kultur-Redakteur Jörg Schieke": {
+      "name": "Jörg Schieke",
+      "url": "https://de.wikipedia.org/wiki/J%C3%B6rg_Schieke",
+      "basis": "name"
+    },
+    "Marcel Wedow": {
+      "name": "Marcel Wedow",
+      "url": null,
+      "basis": ""
+    },
+    "Maren Gottschalk": {
+      "name": "Maren Gottschalk",
+      "url": "https://de.wikipedia.org/wiki/Maren_Gottschalk",
+      "basis": "name"
+    },
+    "Maren Schwarz und Verleger Jens Korch": {
+      "name": "Maren Schwarz",
+      "url": null,
+      "basis": ""
+    },
+    "Margarete Große": {
+      "name": "Margarete Große",
+      "url": null,
+      "basis": ""
+    },
+    "Mariana Leky": {
+      "name": "Mariana Leky",
+      "url": "https://de.wikipedia.org/wiki/Mariana_Leky",
+      "basis": "name+work"
+    },
+    "Marianne Horns, Katrin Ritter und Karin Lehmann": {
+      "name": "Marianne Horns",
+      "url": null,
+      "basis": ""
+    },
+    "Marina Bohlmann-Modersohn": {
+      "name": "Marina Bohlmann-Modersohn",
+      "url": null,
+      "basis": ""
+    },
+    "Mario Pschera": {
+      "name": "Mario Pschera",
+      "url": null,
+      "basis": ""
+    },
+    "Marsha Richarz": {
+      "name": "Marsha Richarz",
+      "url": null,
+      "basis": ""
+    },
+    "Martin Chudalla": {
+      "name": "Martin Chudalla",
+      "url": null,
+      "basis": ""
+    },
+    "Martin Woitke": {
+      "name": "Martin Woitke",
+      "url": null,
+      "basis": ""
+    },
+    "Martina Berscheid": {
+      "name": "Martina Berscheid",
+      "url": "https://de.wikipedia.org/wiki/Martina_Berscheid",
+      "basis": "name"
+    },
+    "Martina Hefter": {
+      "name": "Martina Hefter",
+      "url": "https://de.wikipedia.org/wiki/Martina_Hefter",
+      "basis": "name"
+    },
+    "Matthias Cotta": {
+      "name": "Matthias Cotta",
+      "url": null,
+      "basis": ""
+    },
+    "Matthias Fuhrland": {
+      "name": "Matthias Fuhrland",
+      "url": null,
+      "basis": ""
+    },
+    "Matthias Meisner": {
+      "name": "Matthias Meisner",
+      "url": "https://de.wikipedia.org/wiki/Matthias_Meisner",
+      "basis": "name"
+    },
+    "Max Gross": {
+      "name": "Max Gross",
+      "url": null,
+      "basis": ""
+    },
+    "Meyer, Lehmann, Schulze": {
+      "name": "Meyer, Lehmann, Schulze",
+      "url": null,
+      "basis": ""
+    },
+    "Michael Bonitz": {
+      "name": "Michael Bonitz",
+      "url": null,
+      "basis": ""
+    },
+    "Michaela Kläber": {
+      "name": "Michaela Kläber",
+      "url": null,
+      "basis": ""
+    },
+    "Michail Bulgakow": {
+      "name": "Michail Bulgakow",
+      "url": "https://de.wikipedia.org/wiki/Michail_Afanassjewitsch_Bulgakow",
+      "basis": "name"
+    },
+    "Miguel Bonnefoy": {
+      "name": "Miguel Bonnefoy",
+      "url": "https://de.wikipedia.org/wiki/Miguel_Bonnefoy",
+      "basis": "name"
+    },
+    "Milea Seidenklang": {
+      "name": "Milea Seidenklang",
+      "url": null,
+      "basis": ""
+    },
+    "Natascha Sturm": {
+      "name": "Natascha Sturm",
+      "url": null,
+      "basis": ""
+    },
+    "Nathalie Sirén": {
+      "name": "Nathalie Sirén",
+      "url": null,
+      "basis": ""
+    },
+    "Neda Gholamizarini": {
+      "name": "Neda Gholamizarini",
+      "url": null,
+      "basis": ""
+    },
+    "Nils Müller": {
+      "name": "Nils Müller",
+      "url": null,
+      "basis": ""
+    },
+    "Olaf Markert": {
+      "name": "Olaf Markert",
+      "url": null,
+      "basis": ""
+    },
+    "Pamela L. Travers": {
+      "name": "Pamela L. Travers",
+      "url": null,
+      "basis": ""
+    },
+    "Patrick Wilden": {
+      "name": "Patrick Wilden",
+      "url": null,
+      "basis": ""
+    },
+    "Paul Jeute": {
+      "name": "Paul Jeute",
+      "url": "https://de.wikipedia.org/wiki/Paul_Jeute",
+      "basis": "name"
+    },
+    "Paula Piechotta": {
+      "name": "Paula Piechotta",
+      "url": "https://de.wikipedia.org/wiki/Paula_Piechotta",
+      "basis": "name"
+    },
+    "Peter Berliner": {
+      "name": "Peter Berliner",
+      "url": null,
+      "basis": ""
+    },
+    "Peter Braukmann": {
+      "name": "Peter Braukmann",
+      "url": "https://de.wikipedia.org/wiki/Peter_Braukmann",
+      "basis": "name"
+    },
+    "Peter Godazgar": {
+      "name": "Peter Godazgar",
+      "url": "https://de.wikipedia.org/wiki/Peter_Godazgar",
+      "basis": "name"
+    },
+    "Peter Grandl": {
+      "name": "Peter Grandl",
+      "url": "https://de.wikipedia.org/wiki/Peter_Grandl",
+      "basis": "name"
+    },
+    "Peter Mentzel": {
+      "name": "Peter Mentzel",
+      "url": null,
+      "basis": ""
+    },
+    "Ralf Kramp": {
+      "name": "Ralf Kramp",
+      "url": "https://de.wikipedia.org/wiki/Ralf_Kramp",
+      "basis": "name"
+    },
+    "Ramona Mazur-Käßler": {
+      "name": "Ramona Mazur-Käßler",
+      "url": null,
+      "basis": ""
+    },
+    "Ramona Raden": {
+      "name": "Ramona Raden",
+      "url": null,
+      "basis": ""
+    },
+    "Rasa Bugavičute-Pēce": {
+      "name": "Rasa Bugavičute-Pēce",
+      "url": null,
+      "basis": ""
+    },
+    "Renate Bergmann": {
+      "name": "Renate Bergmann",
+      "url": "https://de.wikipedia.org/wiki/Renate_Bergmann",
+      "basis": "name"
+    },
+    "Renate Henke und Jürgen Lembcke": {
+      "name": "Renate Henke",
+      "url": null,
+      "basis": ""
+    },
+    "Renate Preuss": {
+      "name": "Renate Preuss",
+      "url": null,
+      "basis": ""
+    },
+    "Robin Wells": {
+      "name": "Robin Wells",
+      "url": "https://de.wikipedia.org/wiki/Robin_Wells",
+      "basis": "name"
+    },
+    "Romy Fölck": {
+      "name": "Romy Fölck",
+      "url": "https://de.wikipedia.org/wiki/Romy_F%C3%B6lck",
+      "basis": "name"
+    },
+    "Rowena Jugl": {
+      "name": "Rowena Jugl",
+      "url": null,
+      "basis": ""
+    },
+    "Rudyard Kipling": {
+      "name": "Rudyard Kipling",
+      "url": "https://de.wikipedia.org/wiki/Rudyard_Kipling",
+      "basis": "name+work"
+    },
+    "Ruth Habermehl": {
+      "name": "Ruth Habermehl",
+      "url": null,
+      "basis": ""
+    },
+    "Sabine Lettau": {
+      "name": "Sabine Lettau",
+      "url": null,
+      "basis": ""
+    },
+    "Sabine Wende": {
+      "name": "Sabine Wende",
+      "url": null,
+      "basis": ""
+    },
+    "Salman Rushdie": {
+      "name": "Salman Rushdie",
+      "url": "https://de.wikipedia.org/wiki/Salman_Rushdie",
+      "basis": "name+work"
+    },
+    "Sandra Ladwig": {
+      "name": "Sandra Ladwig",
+      "url": null,
+      "basis": ""
+    },
+    "Sarah Bielig": {
+      "name": "Sarah Bielig",
+      "url": null,
+      "basis": ""
+    },
+    "Sarah Welk": {
+      "name": "Sarah Welk",
+      "url": null,
+      "basis": ""
+    },
+    "Schauspieler Tom Quaas und Paul Hoorn am Akkordeon": {
+      "name": "Tom Quaas",
+      "url": "https://de.wikipedia.org/wiki/Tom_Quaas",
+      "basis": "name"
+    },
+    "Schülerinnen des Landesgymnasiums Sankt Afra": {
+      "name": "Schülerinnen des Landesgymnasiums Sankt Afra",
+      "url": null,
+      "basis": ""
+    },
+    "Sibylle Rüdiger und Karin Lehmann": {
+      "name": "Sibylle Rüdiger",
+      "url": null,
+      "basis": ""
+    },
+    "Siegfried Bauer": {
+      "name": "Siegfried Bauer",
+      "url": null,
+      "basis": ""
+    },
+    "Silke Sohr, David und Sabine Toaspern": {
+      "name": "Silke Sohr",
+      "url": null,
+      "basis": ""
+    },
+    "Simon Jarr": {
+      "name": "Simon Jarr",
+      "url": null,
+      "basis": ""
+    },
+    "Siri Hustved": {
+      "name": "Siri Hustved",
+      "url": null,
+      "basis": ""
+    },
+    "Solveig Schmidt": {
+      "name": "Solveig Schmidt",
+      "url": null,
+      "basis": ""
+    },
+    "Stefan Leithold": {
+      "name": "Stefan Leithold",
+      "url": null,
+      "basis": ""
+    },
+    "Sten Nadolny": {
+      "name": "Sten Nadolny",
+      "url": "https://de.wikipedia.org/wiki/Sten_Nadolny",
+      "basis": "name+work"
+    },
+    "Susan Christine Fuchs": {
+      "name": "Susan Christine Fuchs",
+      "url": null,
+      "basis": ""
+    },
+    "Susann Bauermeister & Kerstin Grimmer (Diakonie Meißen)": {
+      "name": "Susann Bauermeister",
+      "url": null,
+      "basis": ""
+    },
+    "Susann Rüthrich": {
+      "name": "Susann Rüthrich",
+      "url": "https://de.wikipedia.org/wiki/Susann_R%C3%BCthrich",
+      "basis": "name"
+    },
+    "Swen Röder": {
+      "name": "Swen Röder",
+      "url": null,
+      "basis": ""
+    },
+    "Sybille Schmidt-Grundmann": {
+      "name": "Sybille Schmidt-Grundmann",
+      "url": null,
+      "basis": ""
+    },
+    "Sylke Hörhold": {
+      "name": "Sylke Hörhold",
+      "url": null,
+      "basis": ""
+    },
+    "Sylvia Kling": {
+      "name": "Sylvia Kling",
+      "url": null,
+      "basis": ""
+    },
+    "Sylvia Spargen und Bernd Oehler": {
+      "name": "Sylvia Spargen",
+      "url": null,
+      "basis": ""
+    },
+    "Synje Norland": {
+      "name": "Synje Norland",
+      "url": null,
+      "basis": ""
+    },
+    "TM Glaw": {
+      "name": "TM Glaw",
+      "url": null,
+      "basis": ""
+    },
+    "Tara-Louise Witwer": {
+      "name": "Tara-Louise Witwer",
+      "url": null,
+      "basis": ""
+    },
+    "Thea Lehmann": {
+      "name": "Thea Lehmann",
+      "url": "https://de.wikipedia.org/wiki/Thea_Lehmann",
+      "basis": "name"
+    },
+    "Thomas Heche": {
+      "name": "Thomas Heche",
+      "url": null,
+      "basis": ""
+    },
+    "Thomas Hettche": {
+      "name": "Thomas Hettche",
+      "url": "https://de.wikipedia.org/wiki/Thomas_Hettche",
+      "basis": "name"
+    },
+    "Thomas Schade": {
+      "name": "Thomas Schade",
+      "url": null,
+      "basis": ""
+    },
+    "Thomas de Maizière": {
+      "name": "Thomas de Maizière",
+      "url": "https://de.wikipedia.org/wiki/Thomas_de_Maizi%C3%A8re",
+      "basis": "name"
+    },
+    "Tom Tschindscharadse": {
+      "name": "Tom Tschindscharadse",
+      "url": null,
+      "basis": ""
+    },
+    "Ulf Großmann": {
+      "name": "Ulf Großmann",
+      "url": null,
+      "basis": ""
+    },
+    "Ulf Schneider": {
+      "name": "Ulf Schneider",
+      "url": null,
+      "basis": ""
+    },
+    "Ulrike Gastmann und Christian Bosse": {
+      "name": "Ulrike Gastmann",
+      "url": null,
+      "basis": ""
+    },
+    "Ulrike Keding": {
+      "name": "Ulrike Keding",
+      "url": null,
+      "basis": ""
+    },
+    "Ulrike Zeitschel": {
+      "name": "Ulrike Zeitschel",
+      "url": null,
+      "basis": ""
+    },
+    "Uwe Kotteck": {
+      "name": "Uwe Kotteck",
+      "url": null,
+      "basis": ""
+    },
+    "Walter Hansen": {
+      "name": "Walter Hansen",
+      "url": null,
+      "basis": ""
+    },
+    "Werner Böhme": {
+      "name": "Werner Böhme",
+      "url": null,
+      "basis": ""
+    },
+    "Wiete Lenk": {
+      "name": "Wiete Lenk",
+      "url": null,
+      "basis": ""
+    },
+    "Will Guidara": {
+      "name": "Will Guidara",
+      "url": null,
+      "basis": ""
+    },
+    "Wolfgang Dehmelt und Stadtimker Stefan Köppl": {
+      "name": "Wolfgang Dehmelt",
+      "url": null,
+      "basis": ""
+    },
+    "Wolfgang Puls": {
+      "name": "Wolfgang Puls",
+      "url": null,
+      "basis": ""
+    },
+    "Yasmin Kalaydoskop": {
+      "name": "Yasmin Kalaydoskop",
+      "url": null,
+      "basis": ""
+    }
+  }
+}
